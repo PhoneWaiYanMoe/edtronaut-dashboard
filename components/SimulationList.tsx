@@ -41,10 +41,10 @@ export default function SimulationList({
     <div className="bg-white rounded-2xl shadow-xl p-6 border-2 border-gray-100">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 space-y-4 md:space-y-0">
         <h2 className="text-2xl font-bold text-gray-900 flex items-center">
-          <BookOpen className="w-6 h-6 mr-2 text-green-600" />
+          <BookOpen className="w-6 h-6 mr-2 text-blue-600" />
           Your Simulation Journey
           {selectedSkill && (
-            <span className="ml-3 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+            <span className="ml-3 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-lg font-medium">
               {selectedSkill}
             </span>
           )}
@@ -74,15 +74,15 @@ export default function SimulationList({
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`pb-3 px-4 text-sm font-semibold transition-all whitespace-nowrap flex items-center space-x-2 ${
+                    className={`pb-3 px-4 text-sm font-semibold transition-all whitespace-nowrap flex items-center space-x-2 ${
               activeTab === tab.key
-                ? 'border-b-3 border-blue-600 text-blue-600'
-                : 'text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-gray-300'
+                ? 'border-b-3 border-blue-600 text-blue-700'
+                : 'text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-blue-300'
             }`}
           >
             <tab.icon className="w-4 h-4" />
             <span>{tab.label}</span>
-            <span className={`px-2 py-0.5 rounded-full text-xs ${
+                    <span className={`px-2 py-0.5 rounded-full text-xs ${
               activeTab === tab.key ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-600'
             }`}>
               {tab.count}
@@ -105,7 +105,7 @@ export default function SimulationList({
             {selectedSkill && (
               <button
                 onClick={() => onSkillClick('')}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                        className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
                 Clear Filter & View All
               </button>

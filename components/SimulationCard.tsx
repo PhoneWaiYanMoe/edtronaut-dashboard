@@ -25,10 +25,10 @@ export default function SimulationCard({
     <div 
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`border-2 rounded-xl p-5 transition-all duration-300 cursor-pointer ${
+      className={`border rounded-xl p-5 transition-all duration-300 cursor-pointer ${
         hovered 
-          ? 'border-blue-400 shadow-2xl scale-[1.02] bg-gradient-to-r from-blue-50 to-purple-50' 
-          : 'border-gray-200 hover:border-gray-300 shadow-md hover:shadow-lg'
+          ? 'border-blue-400 shadow-lg scale-[1.01] bg-blue-50' 
+          : 'border-gray-200 hover:border-blue-200 shadow-sm hover:shadow-md'
       }`}
     >
       <div className="flex items-start justify-between">
@@ -75,9 +75,9 @@ export default function SimulationCard({
                     e.stopPropagation();
                     onSkillClick(skill);
                   }}
-                  className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                                  className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                     selectedSkill === skill
-                      ? 'bg-blue-600 text-white shadow-lg scale-110'
+                      ? 'bg-blue-600 text-white shadow-md scale-105'
                       : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
                   }`}
                 >
@@ -113,7 +113,7 @@ export default function SimulationCard({
           </span>
           {simulation.score !== null && (
             <div>
-              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <div className="text-3xl font-bold text-blue-700">
                 {simulation.score}%
               </div>
               <div className="text-xs text-gray-500 mt-1">Your Score</div>
@@ -132,7 +132,7 @@ export default function SimulationCard({
           </div>
           <div className="relative w-full bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
             <div 
-              className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full transition-all duration-700"
+              className="absolute inset-0 bg-blue-500 rounded-full transition-all duration-700"
               style={{ width: `${simulation.progress}%` }}
             >
               <div className="absolute inset-0 bg-white/20 animate-shimmer"></div>
@@ -148,17 +148,17 @@ export default function SimulationCard({
       
       {hovered && (
         <div className="mt-4 pt-4 border-t border-gray-200 flex space-x-3">
-          <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2 font-semibold">
+          <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-all flex items-center justify-center space-x-2 font-semibold">
             <Play className="w-4 h-4" />
             <span>{simulation.status === 'not-started' ? 'Start' : 'Continue'}</span>
           </button>
           {simulation.status === 'completed' && (
             <>
-              <button className="px-4 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all flex items-center space-x-2 font-semibold">
+              <button className="px-4 py-3 border border-blue-300 text-blue-700 rounded-lg hover:bg-blue-50 transition-all flex items-center space-x-2 font-semibold">
                 <Download className="w-4 h-4" />
                 <span>Certificate</span>
               </button>
-              <button className="px-4 py-3 border-2 border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-all flex items-center space-x-2 font-semibold">
+              <button className="px-4 py-3 border border-blue-300 text-blue-700 rounded-lg hover:bg-blue-50 transition-all flex items-center space-x-2 font-semibold">
                 <Share2 className="w-4 h-4" />
                 <span>Share</span>
               </button>

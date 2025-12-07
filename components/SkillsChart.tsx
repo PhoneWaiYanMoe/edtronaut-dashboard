@@ -16,14 +16,14 @@ export default function SkillsChart({ skills, simulations, selectedSkill, onSkil
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6 border-2 border-gray-100">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+        <h2 className="text-2xl font-semibold text-gray-900 flex items-center">
           <BarChart3 className="w-6 h-6 mr-2 text-blue-600" />
           Skills Mastery Dashboard
         </h2>
         {selectedSkill && (
           <button
             onClick={() => onSkillSelect(null)}
-            className="flex items-center space-x-2 px-4 py-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-all shadow-sm"
+            className="flex items-center space-x-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-all shadow-sm"
           >
             <X className="w-4 h-4" />
             <span className="font-medium">Clear Filter</span>
@@ -46,20 +46,20 @@ export default function SkillsChart({ skills, simulations, selectedSkill, onSkil
                   onClick={() => onSkillSelect(isSelected ? null : skill)}
                   className={`text-sm font-semibold transition-all flex items-center space-x-2 ${
                     isSelected 
-                      ? 'text-blue-600 scale-110' 
+                      ? 'text-blue-700 scale-110' 
                       : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
                   <span>{skill}</span>
                   {data.trend === 'up' ? (
-                    <ArrowUp className="w-4 h-4 text-green-500" />
+                    <ArrowUp className="w-4 h-4 text-blue-600" />
                   ) : (
-                    <ArrowDown className="w-4 h-4 text-red-500" />
+                    <ArrowDown className="w-4 h-4 text-blue-500" />
                   )}
                 </button>
                 <div className="flex items-center space-x-3">
                   <span className="text-xs text-gray-500">{simCount} simulations</span>
-                  <span className={`text-sm font-bold ${isSelected ? 'text-blue-600' : 'text-gray-700'}`}>
+                  <span className={`text-sm font-bold ${isSelected ? 'text-blue-700' : 'text-gray-700'}`}>
                     {data.current}%
                   </span>
                 </div>
@@ -69,12 +69,12 @@ export default function SkillsChart({ skills, simulations, selectedSkill, onSkil
                   <div 
                     className={`h-4 rounded-full transition-all duration-700 relative ${
                       isSelected 
-                        ? 'bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-pulse' 
+                        ? 'bg-blue-600' 
                         : data.current >= 80 
-                          ? 'bg-gradient-to-r from-green-500 to-emerald-500'
+                          ? 'bg-blue-500'
                           : data.current >= 60
-                            ? 'bg-gradient-to-r from-blue-500 to-blue-600'
-                            : 'bg-gradient-to-r from-amber-500 to-orange-500'
+                            ? 'bg-blue-400'
+                            : 'bg-blue-300'
                     }`}
                     style={{ width: `${data.current}%` }}
                   >
@@ -84,7 +84,7 @@ export default function SkillsChart({ skills, simulations, selectedSkill, onSkil
                 {data.current !== data.previous && (
                   <div className="absolute -right-2 top-1/2 transform -translate-y-1/2">
                     <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                      data.trend === 'up' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                      data.trend === 'up' ? 'bg-blue-100 text-blue-700' : 'bg-blue-50 text-blue-600'
                     }`}>
                       {data.trend === 'up' ? '+' : ''}{data.current - data.previous}
                     </span>
@@ -101,7 +101,7 @@ export default function SkillsChart({ skills, simulations, selectedSkill, onSkil
         })}
       </div>
       
-      <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-100">
+      <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
         <p className="text-sm text-gray-700 flex items-center">
           <Sparkles className="w-4 h-4 mr-2 text-blue-600" />
           <strong>Pro Tip:</strong>&nbsp;Click any skill bar to filter simulations below and see which courses helped you develop that skill

@@ -20,22 +20,22 @@ export default function Sidebar({ user }: SidebarProps) {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <span className="text-sm text-gray-600">Global Rank</span>
-            <span className="text-lg font-bold text-blue-600">#{user.rankPosition}</span>
+            <span className="text-lg font-bold text-blue-700">#{user.rankPosition}</span>
           </div>
           
           <div className="flex items-center justify-between">
             <span className="text-sm text-gray-600">Percentile</span>
-            <span className="text-lg font-bold text-green-600">{percentile}%</span>
+            <span className="text-lg font-bold text-blue-700">{percentile}%</span>
           </div>
           
           <div className="flex items-center justify-between">
             <span className="text-sm text-gray-600">Total XP</span>
-            <span className="text-lg font-bold text-purple-600">{user.xp}</span>
+            <span className="text-lg font-bold text-blue-700">{user.xp}</span>
           </div>
           
           <div className="flex items-center justify-between">
             <span className="text-sm text-gray-600">Certificates</span>
-            <span className="text-lg font-bold text-yellow-600">{user.certificates}</span>
+            <span className="text-lg font-bold text-blue-700">{user.certificates}</span>
           </div>
         </div>
         
@@ -46,7 +46,7 @@ export default function Sidebar({ user }: SidebarProps) {
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all"
+              className="bg-blue-500 h-2 rounded-full transition-all"
               style={{ width: `${(user.xp / user.nextLevelXp) * 100}%` }}
             />
           </div>
@@ -54,7 +54,7 @@ export default function Sidebar({ user }: SidebarProps) {
       </div>
 
       {/* Recent Activity */}
-      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
+      <div className="bg-blue-500 rounded-2xl shadow-lg p-6 text-white">
         <h3 className="text-lg font-bold mb-4 flex items-center">
           <Zap className="w-5 h-5 mr-2" />
           Your Impact
@@ -82,13 +82,13 @@ export default function Sidebar({ user }: SidebarProps) {
           <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-blue-50 text-sm font-medium text-gray-700 transition-colors">
             📊 View Analytics
           </button>
-          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-green-50 text-sm font-medium text-gray-700 transition-colors">
+          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-blue-50 text-sm font-medium text-gray-700 transition-colors">
             🎯 Set Goals
           </button>
-          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-purple-50 text-sm font-medium text-gray-700 transition-colors">
+          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-blue-50 text-sm font-medium text-gray-700 transition-colors">
             📝 Update Profile
           </button>
-          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-orange-50 text-sm font-medium text-gray-700 transition-colors">
+          <button className="w-full text-left px-4 py-2 rounded-lg hover:bg-blue-50 text-sm font-medium text-gray-700 transition-colors">
             🔔 Notifications
           </button>
         </div>

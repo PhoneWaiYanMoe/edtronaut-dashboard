@@ -7,23 +7,22 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-green-500 rounded-xl flex items-center justify-center text-white font-bold shadow-lg transform hover:rotate-6 transition-transform">
+              <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center text-white font-semibold shadow-sm">
                 ED
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
             </div>
             <div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-semibold text-blue-800">
                 EDTRONAUT
               </span>
-              <div className="text-xs text-gray-500">Learning Dashboard</div>
+              <div className="text-xs text-blue-600">Learning Dashboard</div>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-6 text-sm">
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Simulations</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Jobs</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">CV PowerUp</a>
-            <button className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all">
+            <a href="#" className="text-blue-700 hover:text-blue-800 font-medium transition-colors">Simulations</a>
+            <a href="#" className="text-blue-700 hover:text-blue-800 font-medium transition-colors">Jobs</a>
+            <a href="#" className="text-blue-700 hover:text-blue-800 font-medium transition-colors">CV PowerUp</a>
+            <button className="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-all">
               <Sparkles className="w-4 h-4 inline mr-1" />
               Upgrade
             </button>

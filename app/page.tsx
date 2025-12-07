@@ -45,7 +45,7 @@ export default function LearnerDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 w-full">
+    <div className="min-h-screen bg-gray-50 w-full">
       <Header />
 
       <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
@@ -116,7 +116,7 @@ export default function LearnerDashboard() {
       </div>
 
       {/* Floating Action Button */}
-      <button className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-110 z-40 group">
+      <button className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 z-40 group">
         <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform" />
         <div className="absolute bottom-full right-0 mb-2 bg-gray-900 text-white text-xs rounded-lg px-3 py-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
           Need help? Ask AI Mentor
