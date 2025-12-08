@@ -78,7 +78,7 @@ export const mockSimulations: Simulation[] = [
     lastActivity: "2024-12-03",
     completedDate: "2024-12-03",
     startedDate: "2024-12-02",
-    skills: ["Communication", "Strategic Thinking", "Stakeholder Management"],
+    skills: ["Interpersonal skills", "Strategic Thinking", "Stakeholder Management"],
     estimatedTime: "2 hours",
     actualTime: 2.2,
     steps: 3,
