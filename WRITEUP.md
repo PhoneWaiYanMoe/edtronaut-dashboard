@@ -6,7 +6,7 @@ I built a comprehensive, user-centric dashboard for Edtronaut's AI-enabled Job S
 
 **Live Demo:** https://edtronaut-dashboard-urcx.vercel.app/
 **Repository:** https://github.com/PhoneWaiYanMoe/edtronaut-dashboard
-
+**Architecure:** https://github.com/PhoneWaiYanMoe/edtronaut-dashboard/blob/master/architecture.png
 ---
 
 ## Approach & Key Design Decisions
