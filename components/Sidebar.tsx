@@ -9,7 +9,7 @@ export default function Sidebar({ user }: SidebarProps) {
   const percentile = Math.round((1 - user.rankPosition / user.totalUsers) * 100);
   
   return (
-    <div className="hidden xl:block w-64 space-y-6">
+    <div className="hidden lg:block w-64 space-y-6">
       {/* Quick Stats Sidebar */}
       <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100 sticky top-24">
         <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
@@ -96,4 +96,3 @@ export default function Sidebar({ user }: SidebarProps) {
     </div>
   );
 }
-

@@ -25,7 +25,6 @@ export default function LearnerDashboard() {
 
   useEffect(() => {
     setAnimateStats(true);
-    // Generate heatmap data only on client side to avoid hydration mismatch
     setHeatmapData(generateHeatmapData());
   }, []);
 
@@ -50,11 +49,10 @@ export default function LearnerDashboard() {
 
       <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-[1920px] mx-auto">
-          <div className="flex gap-8">
-            {/* Left Sidebar */}
+          <div className="flex gap-6 xl:gap-8">
+            
             <Sidebar user={mockUser} />
 
-            {/* Main Content Area */}
             <div className="flex-1 min-w-0">
               <HeroSection 
                 user={mockUser}
@@ -69,9 +67,8 @@ export default function LearnerDashboard() {
                 onClose={() => setShowAchievements(false)}
               />
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-                {/* Main Content */}
-                <div className="lg:col-span-2 space-y-8">
+              <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8 mt-8">
+                <div className="xl:col-span-2 space-y-8">
                   <SkillInsights skills={mockSkills} />
 
                   <SkillsChart
@@ -97,7 +94,6 @@ export default function LearnerDashboard() {
                   />
                 </div>
 
-                {/* Right Sidebar - Recommendations & Certificates */}
                 <div className="space-y-6">
                   <RecommendationsPanel
                     recommendations={mockRecommendations}
