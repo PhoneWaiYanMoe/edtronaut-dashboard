@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <svg viewBox="0 0 1200 1400" xmlns="http://www.w3.org/2000/svg">
+      <!-- Title -->
+      <text
+        x="600"
+        y="40"
+        font-size="28"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#1e40af"
+      >
+        Edtronaut Dashboard Architecture
+      </text>
+
+      <!-- Browser Layer -->
+      <rect
+        x="50"
+        y="80"
+        width="1100"
+        height="120"
+        fill="#dbeafe"
+        stroke="#3b82f6"
+        stroke-width="2"
+        rx="8"
+      />
+      <text
+        x="600"
+        y="110"
+        font-size="18"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#1e40af"
+      >
+        Browser
+      </text>
+      <text x="600" y="140" font-size="14" text-anchor="middle" fill="#1e40af">
+        Next.js 16 (App Router)
+      </text>
+      <text x="600" y="165" font-size="12" text-anchor="middle" fill="#475569">
+        Server-Side Rendering (SSR) + Client Components
+      </text>
+
+      <!-- Arrow -->
+      <path
+        d="M 600 200 L 600 230"
+        stroke="#3b82f6"
+        stroke-width="2"
+        fill="none"
+        marker-end="url(#arrowblue)"
+      />
+
+      <!-- Main Application Layer -->
+      <rect
+        x="50"
+        y="240"
+        width="1100"
+        height="280"
+        fill="#f1f5f9"
+        stroke="#64748b"
+        stroke-width="2"
+        rx="8"
+      />
+      <text
+        x="600"
+        y="270"
+        font-size="18"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#334155"
+      >
+        Application Layer
+      </text>
+
+      <!-- App Router -->
+      <rect
+        x="80"
+        y="290"
+        width="200"
+        height="210"
+        fill="#fff"
+        stroke="#3b82f6"
+        stroke-width="2"
+        rx="6"
+      />
+      <text
+        x="180"
+        y="315"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#1e40af"
+      >
+        app/
+      </text>
+      <text x="180" y="340" font-size="12" text-anchor="middle" fill="#475569">
+        page.tsx
+      </text>
+      <text x="180" y="360" font-size="11" text-anchor="middle" fill="#64748b">
+        (Main Dashboard)
+      </text>
+      <text x="180" y="385" font-size="12" text-anchor="middle" fill="#475569">
+        layout.tsx
+      </text>
+      <text x="180" y="405" font-size="11" text-anchor="middle" fill="#64748b">
+        (Root Layout)
+      </text>
+      <text x="180" y="430" font-size="12" text-anchor="middle" fill="#475569">
+        globals.css
+      </text>
+      <text x="180" y="450" font-size="11" text-anchor="middle" fill="#64748b">
+        (TailwindCSS)
+      </text>
+      <rect x="95" y="465" width="170" height="25" fill="#dbeafe" rx="4" />
+      <text
+        x="180"
+        y="482"
+        font-size="11"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#1e40af"
+      >
+        Client Component
+      </text>
+
+      <!-- Components -->
+      <rect
+        x="320"
+        y="290"
+        width="240"
+        height="210"
+        fill="#fff"
+        stroke="#10b981"
+        stroke-width="2"
+        rx="6"
+      />
+      <text
+        x="440"
+        y="315"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#047857"
+      >
+        components/
+      </text>
+      <text x="340" y="340" font-size="11" text-anchor="start" fill="#475569">
+        • Header.tsx
+      </text>
+      <text x="340" y="360" font-size="11" text-anchor="start" fill="#475569">
+        • HeroSection.tsx
+      </text>
+      <text x="340" y="380" font-size="11" text-anchor="start" fill="#475569">
+        • SkillsChart.tsx
+      </text>
+      <text x="340" y="400" font-size="11" text-anchor="start" fill="#475569">
+        • SimulationList.tsx
+      </text>
+      <text x="340" y="420" font-size="11" text-anchor="start" fill="#475569">
+        • SimulationCard.tsx
+      </text>
+      <text x="340" y="440" font-size="11" text-anchor="start" fill="#475569">
+        • ActivityHeatmap.tsx
+      </text>
+      <text x="340" y="460" font-size="11" text-anchor="start" fill="#475569">
+        • RecommendationsPanel.tsx
+      </text>
+      <text x="340" y="480" font-size="11" text-anchor="start" fill="#475569">
+        • CertificatesSection.tsx
+      </text>
+
+      <!-- Library/Utils -->
+      <rect
+        x="600"
+        y="290"
+        width="220"
+        height="210"
+        fill="#fff"
+        stroke="#f59e0b"
+        stroke-width="2"
+        rx="6"
+      />
+      <text
+        x="710"
+        y="315"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#b45309"
+      >
+        lib/
+      </text>
+      <text x="620" y="345" font-size="12" text-anchor="start" fill="#475569">
+        types.ts
+      </text>
+      <text x="625" y="363" font-size="10" text-anchor="start" fill="#64748b">
+        TypeScript interfaces
+      </text>
+      <text x="620" y="385" font-size="12" text-anchor="start" fill="#475569">
+        mockData.ts
+      </text>
+      <text x="625" y="403" font-size="10" text-anchor="start" fill="#64748b">
+        Mock user, simulations
+      </text>
+      <text x="620" y="425" font-size="12" text-anchor="start" fill="#475569">
+        utils.ts
+      </text>
+      <text x="625" y="443" font-size="10" text-anchor="start" fill="#64748b">
+        Filtering, sorting logic
+      </text>
+      <rect x="615" y="455" width="190" height="35" fill="#fef3c7" rx="4" />
+      <text
+        x="710"
+        y="473"
+        font-size="10"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#b45309"
+      >
+        Business Logic
+      </text>
+      <text x="710" y="485" font-size="9" text-anchor="middle" fill="#92400e">
+        Recommendation Engine
+      </text>
+
+      <!-- Tests -->
+      <rect
+        x="860"
+        y="290"
+        width="260"
+        height="210"
+        fill="#fff"
+        stroke="#8b5cf6"
+        stroke-width="2"
+        rx="6"
+      />
+      <text
+        x="990"
+        y="315"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#6d28d9"
+      >
+        __tests__/
+      </text>
+      <text x="875" y="340" font-size="11" text-anchor="start" fill="#475569">
+        utils.test.ts
+      </text>
+      <text x="875" y="360" font-size="11" text-anchor="start" fill="#475569">
+        recommendations.test.ts
+      </text>
+      <text
+        x="875"
+        y="385"
+        font-size="11"
+        font-weight="bold"
+        text-anchor="start"
+        fill="#475569"
+      >
+        components/
+      </text>
+      <text x="880" y="405" font-size="10" text-anchor="start" fill="#64748b">
+        • StatCard.test.tsx
+      </text>
+      <text x="880" y="422" font-size="10" text-anchor="start" fill="#64748b">
+        • SkillsChart.test.tsx
+      </text>
+      <text x="880" y="439" font-size="10" text-anchor="start" fill="#64748b">
+        • SimulationList.test.tsx
+      </text>
+      <text
+        x="875"
+        y="460"
+        font-size="11"
+        font-weight="bold"
+        text-anchor="start"
+        fill="#475569"
+      >
+        integration/
+      </text>
+      <text x="880" y="480" font-size="10" text-anchor="start" fill="#64748b">
+        • dashboard.test.tsx
+      </text>
+
+      <!-- Arrow -->
+      <path
+        d="M 600 520 L 600 550"
+        stroke="#64748b"
+        stroke-width="2"
+        fill="none"
+        marker-end="url(#arrowgray)"
+      />
+
+      <!-- State Management Layer -->
+      <rect
+        x="50"
+        y="560"
+        width="1100"
+        height="160"
+        fill="#fef3c7"
+        stroke="#f59e0b"
+        stroke-width="2"
+        rx="8"
+      />
+      <text
+        x="600"
+        y="590"
+        font-size="18"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#b45309"
+      >
+        State Management
+      </text>
+
+      <!-- React Hooks -->
+      <rect
+        x="200"
+        y="610"
+        width="320"
+        height="90"
+        fill="#fff"
+        stroke="#f59e0b"
+        stroke-width="1.5"
+        rx="4"
+      />
+      <text
+        x="260"
+        y="635"
+        font-size="13"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#b45309"
+      >
+        React Hooks
+      </text>
+      <text x="220" y="660" font-size="11" text-anchor="start" fill="#475569">
+        • useState (selectedSkill, sortBy, filters)
+      </text>
+      <text x="220" y="678" font-size="11" text-anchor="start" fill="#475569">
+        • useMemo (filtered/sorted simulations)
+      </text>
+      <text x="220" y="696" font-size="11" text-anchor="start" fill="#475569">
+        • useEffect (animations, data generation)
+      </text>
+
+      <!-- Future State -->
+      <rect
+        x="680"
+        y="610"
+        width="320"
+        height="90"
+        fill="#fee2e2"
+        stroke="#dc2626"
+        stroke-width="1.5"
+        stroke-dasharray="5,5"
+        rx="4"
+      />
+      <text
+        x="840"
+        y="635"
+        font-size="13"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#991b1b"
+      >
+        Future: Global State
+      </text>
+      <text x="700" y="658" font-size="10" text-anchor="start" fill="#7f1d1d">
+        • React Context (User, Theme)
+      </text>
+      <text x="700" y="675" font-size="10" text-anchor="start" fill="#7f1d1d">
+        • SWR / React Query (API cache)
+      </text>
+      <text x="700" y="692" font-size="10" text-anchor="start" fill="#7f1d1d">
+        • Zustand (Complex state)
+      </text>
+
+      <!-- Arrow -->
+      <path
+        d="M 600 720 L 600 750"
+        stroke="#64748b"
+        stroke-width="2"
+        fill="none"
+        marker-end="url(#arrowgray)"
+      />
+
+      <!-- Data Layer -->
+      <rect
+        x="50"
+        y="760"
+        width="1100"
+        height="200"
+        fill="#e0f2fe"
+        stroke="#0284c7"
+        stroke-width="2"
+        rx="8"
+      />
+      <text
+        x="600"
+        y="790"
+        font-size="18"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#075985"
+      >
+        Data Layer
+      </text>
+
+      <!-- Current: Mock Data -->
+      <rect
+        x="100"
+        y="810"
+        width="450"
+        height="120"
+        fill="#fff"
+        stroke="#10b981"
+        stroke-width="2"
+        rx="6"
+      />
+      <text
+        x="325"
+        y="835"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#047857"
+      >
+        Current: Mock Data
+      </text>
+      <text x="120" y="860" font-size="11" text-anchor="start" fill="#475569">
+        • mockUser: Profile, stats, XP, rank
+      </text>
+      <text x="120" y="878" font-size="11" text-anchor="start" fill="#475569">
+        • mockSimulations: 8 simulations with progress
+      </text>
+      <text x="120" y="896" font-size="11" text-anchor="start" fill="#475569">
+        • mockSkills: 8 skills with proficiency levels
+      </text>
+      <text x="120" y="914" font-size="11" text-anchor="start" fill="#475569">
+        • mockRecommendations: AI-suggested content
+      </text>
+
+      <!-- Future: API -->
+      <rect
+        x="600"
+        y="810"
+        width="480"
+        height="120"
+        fill="#fee2e2"
+        stroke="#dc2626"
+        stroke-width="2"
+        stroke-dasharray="5,5"
+        rx="6"
+      />
+      <text
+        x="840"
+        y="835"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#991b1b"
+      >
+        Future: REST/GraphQL API
+      </text>
+      <text x="620" y="860" font-size="11" text-anchor="start" fill="#7f1d1d">
+        GET /api/user → User profile & stats
+      </text>
+      <text x="620" y="878" font-size="11" text-anchor="start" fill="#7f1d1d">
+        GET /api/simulations → All simulations
+      </text>
+      <text x="620" y="896" font-size="11" text-anchor="start" fill="#7f1d1d">
+        GET /api/skills → Skill proficiency data
+      </text>
+      <text x="620" y="914" font-size="11" text-anchor="start" fill="#7f1d1d">
+        POST /api/recommendations → ML-powered recs
+      </text>
+
+      <!-- Arrow -->
+      <path
+        d="M 600 960 L 600 990"
+        stroke="#64748b"
+        stroke-width="2"
+        fill="none"
+        marker-end="url(#arrowgray)"
+      />
+
+      <!-- Backend Services (Future) -->
+      <rect
+        x="50"
+        y="1000"
+        width="1100"
+        height="180"
+        fill="#f3e8ff"
+        stroke="#9333ea"
+        stroke-width="2"
+        stroke-dasharray="5,5"
+        rx="8"
+      />
+      <text
+        x="600"
+        y="1030"
+        font-size="18"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#6b21a8"
+      >
+        Backend Services (Future)
+      </text>
+
+      <rect
+        x="100"
+        y="1050"
+        width="230"
+        height="100"
+        fill="#fff"
+        stroke="#9333ea"
+        stroke-width="1.5"
+        rx="4"
+      />
+      <text
+        x="215"
+        y="1075"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#6b21a8"
+      >
+        Authentication
+      </text>
+      <text x="115" y="1095" font-size="10" text-anchor="start" fill="#64748b">
+        • OAuth (Google, LinkedIn)
+      </text>
+      <text x="115" y="1112" font-size="10" text-anchor="start" fill="#64748b">
+        • JWT tokens
+      </text>
+      <text x="115" y="1129" font-size="10" text-anchor="start" fill="#64748b">
+        • Session management
+      </text>
+
+      <rect
+        x="370"
+        y="1050"
+        width="230"
+        height="100"
+        fill="#fff"
+        stroke="#9333ea"
+        stroke-width="1.5"
+        rx="4"
+      />
+      <text
+        x="485"
+        y="1075"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#6b21a8"
+      >
+        Database
+      </text>
+      <text x="385" y="1095" font-size="10" text-anchor="start" fill="#64748b">
+        • PostgreSQL (User, Sims)
+      </text>
+      <text x="385" y="1112" font-size="10" text-anchor="start" fill="#64748b">
+        • Redis (Cache, Sessions)
+      </text>
+      <text x="385" y="1129" font-size="10" text-anchor="start" fill="#64748b">
+        • S3 (Certificates, Assets)
+      </text>
+
+      <rect
+        x="640"
+        y="1050"
+        width="230"
+        height="100"
+        fill="#fff"
+        stroke="#9333ea"
+        stroke-width="1.5"
+        rx="4"
+      />
+      <text
+        x="755"
+        y="1075"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#6b21a8"
+      >
+        ML Services
+      </text>
+      <text x="655" y="1095" font-size="10" text-anchor="start" fill="#64748b">
+        • Recommendation Engine
+      </text>
+      <text x="655" y="1112" font-size="10" text-anchor="start" fill="#64748b">
+        • Skill Gap Analysis
+      </text>
+      <text x="655" y="1129" font-size="10" text-anchor="start" fill="#64748b">
+        • Job Matching Algorithm
+      </text>
+
+      <rect
+        x="910"
+        y="1050"
+        width="220"
+        height="100"
+        fill="#fff"
+        stroke="#9333ea"
+        stroke-width="1.5"
+        rx="4"
+      />
+      <text
+        x="1020"
+        y="1075"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#6b21a8"
+      >
+        External APIs
+      </text>
+      <text x="925" y="1095" font-size="10" text-anchor="start" fill="#64748b">
+        • LinkedIn API (Sharing)
+      </text>
+      <text x="925" y="1112" font-size="10" text-anchor="start" fill="#64748b">
+        • Email Service (Sendgrid)
+      </text>
+      <text x="925" y="1129" font-size="10" text-anchor="start" fill="#64748b">
+        • Analytics (Mixpanel)
+      </text>
+
+      <!-- Technology Stack Footer -->
+      <rect
+        x="50"
+        y="1220"
+        width="1100"
+        height="140"
+        fill="#f8fafc"
+        stroke="#94a3b8"
+        stroke-width="2"
+        rx="8"
+      />
+      <text
+        x="600"
+        y="1250"
+        font-size="18"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#334155"
+      >
+        Technology Stack
+      </text>
+
+      <text
+        x="100"
+        y="1280"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="start"
+        fill="#1e40af"
+      >
+        Frontend:
+      </text>
+      <text x="100" y="1298" font-size="11" text-anchor="start" fill="#475569">
+        Next.js 16, React 19, TypeScript 5, TailwindCSS 4
+      </text>
+
+      <text
+        x="100"
+        y="1325"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="start"
+        fill="#047857"
+      >
+        Testing:
+      </text>
+      <text x="100" y="1343" font-size="11" text-anchor="start" fill="#475569">
+        Jest, React Testing Library
+      </text>
+
+      <text
+        x="550"
+        y="1280"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="start"
+        fill="#b45309"
+      >
+        State:
+      </text>
+      <text x="550" y="1298" font-size="11" text-anchor="start" fill="#475569">
+        React Hooks (useState, useMemo, useEffect)
+      </text>
+
+      <text
+        x="550"
+        y="1325"
+        font-size="12"
+        font-weight="bold"
+        text-anchor="start"
+        fill="#991b1b"
+      >
+        Future:
+      </text>
+      <text x="550" y="1343" font-size="11" text-anchor="start" fill="#475569">
+        SWR/React Query, PostgreSQL, Redis, Python ML
+      </text>
+
+      <!-- Arrow definitions -->
+      <defs>
+        <marker
+          id="arrowblue"
+          markerWidth="10"
+          markerHeight="10"
+          refX="9"
+          refY="3"
+          orient="auto"
+          markerUnits="strokeWidth"
+        >
+          <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
+        </marker>
+        <marker
+          id="arrowgray"
+          markerWidth="10"
+          markerHeight="10"
+          refX="9"
+          refY="3"
+          orient="auto"
+          markerUnits="strokeWidth"
+        >
+          <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+        </marker>
+      </defs>
+
+      <!-- Legend -->
+      <rect
+        x="900"
+        y="1230"
+        width="20"
+        height="15"
+        fill="#fff"
+        stroke="#10b981"
+        stroke-width="2"
+      />
+      <text x="925" y="1242" font-size="10" text-anchor="start" fill="#334155">
+        Implemented
+      </text>
+
+      <rect
+        x="1040"
+        y="1230"
+        width="20"
+        height="15"
+        fill="#fee2e2"
+        stroke="#dc2626"
+        stroke-width="2"
+        stroke-dasharray="3,3"
+      />
+      <text x="1065" y="1242" font-size="10" text-anchor="start" fill="#334155">
+        Future/Planned
+      </text>
+    </svg>
+  </body>
+</html>
