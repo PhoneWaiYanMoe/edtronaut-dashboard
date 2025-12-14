@@ -61,10 +61,10 @@ export default function HeroSection({ user, careerActivationRate, animateStats, 
         </div>
 
         {/* XP Progress Bar */}
-        <div className="bg-blue-600/40 rounded-lg p-4 mb-6">
+        <div className="bg-blue-100/40 border border-blue-300 rounded-lg p-4 mb-6">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium">Level {user.level} Progress</span>
-            <span className="text-sm text-blue-100">{user.xp} / {user.nextLevelXp} XP</span>
+            <span className="text-sm font-medium text-blue-800">Level {user.level} Progress</span>
+            <span className="text-sm text-blue-800">{user.xp} / {user.nextLevelXp} XP</span>
           </div>
           <div className="w-full bg-white rounded-full h-3 overflow-hidden">
             <div 
@@ -72,7 +72,7 @@ export default function HeroSection({ user, careerActivationRate, animateStats, 
               style={{ width: `${(user.xp / user.nextLevelXp) * 100}%` }}
             />
           </div>
-          <p className="text-xs text-blue-200 mt-2">{user.nextLevelXp - user.xp} XP to Level {user.level + 1}</p>
+          <p className="text-xs text-blue-800 mt-2">{user.nextLevelXp - user.xp} XP to Level {user.level + 1}</p>
         </div>
 
         {/* Enhanced KPI Grid */}
