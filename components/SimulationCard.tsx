@@ -25,14 +25,21 @@ interface ResponsiveSimulationCardProps {
   simulation: Simulation;
   selectedSkill: string | null;
   onSkillClick: (skill: string) => void;
+  hovered?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export default function ResponsiveSimulationCard({ 
-  simulation, 
-  selectedSkill, 
-  onSkillClick 
+export default function ResponsiveSimulationCard({
+  simulation,
+  selectedSkill,
+  onSkillClick,
+  hovered,
+  onMouseEnter,
+  onMouseLeave
 }: ResponsiveSimulationCardProps) {
-  const [hovered, setHovered] = useState(false);
+  const [internalHovered, setInternalHovered] = useState(false);
+  const isHovered = typeof hovered === 'boolean' ? hovered : internalHovered;
 
   const getStatusColor = (status: string) => {
     switch(status) {
@@ -54,10 +61,10 @@ export default function ResponsiveSimulationCard({
 
   return (
     <div 
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => { onMouseEnter?.(); setInternalHovered(true); }}
+      onMouseLeave={() => { onMouseLeave?.(); setInternalHovered(false); }}
       className={`border rounded-xl p-4 sm:p-5 transition-all duration-300 cursor-pointer ${
-        hovered 
+        isHovered 
           ? 'border-blue-400 shadow-lg scale-[1.01] bg-blue-50' 
           : 'border-gray-200 hover:border-blue-200 shadow-sm hover:shadow-md'
       }`}
@@ -66,7 +73,7 @@ export default function ResponsiveSimulationCard({
       <div className="flex flex-col sm:flex-row items-start gap-4 mb-4">
         {/* Logo and Info */}
         <div className="flex items-start gap-3 sm:gap-4 flex-1 min-w-0 w-full sm:w-auto">
-          <div className={`text-3xl sm:text-4xl transform transition-transform flex-shrink-0 ${hovered ? 'scale-125' : ''}`}>
+          <div className={`text-3xl sm:text-4xl transform transition-transform flex-shrink-0 ${isHovered ? 'scale-125' : ''}`}>
             {simulation.logo}
           </div>
           
@@ -189,7 +196,7 @@ export default function ResponsiveSimulationCard({
       )}
       
       {/* Action Buttons */}
-      {hovered && (
+      {isHovered && (
         <div className="mt-4 pt-4 border-t border-gray-200 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 sm:py-3 rounded-lg transition-all flex items-center justify-center gap-2 font-semibold text-sm">
             <Play className="w-4 h-4" />
